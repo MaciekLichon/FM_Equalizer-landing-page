@@ -1,0 +1,74 @@
+@import './variables.scss';
+
+body {
+  font-family: $ff-regular;
+  font-size: $fs-regular; 
+  font-weight: $fw-regular;
+  line-height: 1.625;
+
+  background-image: url('../assets/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  background-position: 20px -250px;
+
+  padding: 0 1.5rem;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 15px 0 14px 0;
+  background: none;
+  border: none;
+  border-radius: 12px;
+  font-weight: $fw-bold;
+  font-size: $fs-regular-tablet;
+  letter-spacing: -0.18px;
+  line-height: 1.78;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  &.button-ios {
+    color: $clr-light;
+    background-color: $clr-dark;
+    &:hover {
+      background-color: $clr-blue;
+    }
+  }
+
+  &.button-android {
+    color: $clr-dark;
+    background-color: $clr-light;
+    &:hover {
+      background-color: $clr-yellow;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: $fs-regular-tablet;
+    background-image: url('../assets/bg-pattern-1.svg'), url('../assets/bg-main-tablet.png');
+    background-position: 540px -33px, -430px -280px;
+    background-size: 267px 400px, auto; 
+
+    padding: 0 2.438rem 0 2.063rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: $fs-regular-desktop;
+    background-image: url('../assets/bg-pattern-1.svg'), url('../assets/bg-main-desktop.png');
+    background-position: right -40px, -300px -260px;
+    background-size: auto, auto; 
+  }
+}
